@@ -6,6 +6,6 @@ module.exports = {
 
   async down(db) {
 
-    await db.collection('quotes').updateOne({ quotes: "Do It Now" }, { $set:{ quotes:"work hard"} });
+    await db.collection('quotes').updateOne({ quotes: "checking log files" }, { $set:{ quotes:"work hard"} });
   }
 };
