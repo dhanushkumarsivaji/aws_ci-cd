@@ -1,14 +1,16 @@
+
 version: 0.2
 
 phases:
   install:
     runtime-versions:
-      nodejs: 10
+        nodejs: 10
     commands:
-      # Install dependencies needed for running tests
       - npm install
       - npm run clientinstall
-      - pip install --upgrade awscli
-  artifacts:
+  # build:
+  #   commands:
+  #     - npm start
+artifacts:
   files:
     - '**/*'
