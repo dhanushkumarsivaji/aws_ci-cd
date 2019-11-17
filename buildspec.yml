@@ -5,24 +5,13 @@ phases:
   install:
     runtime-versions:
         nodejs: 10
-    # commands:
-    #   - npm install
-    #   - npm run clientinstall
-    #   - npm run clientbuild
-    #   - npm install -g migrate-mongo
-  # build:
-  #   commands:
-  #     - migrate-mongo up
-pre_build:
     commands:
-      - echo Installing source NPM dependencies...
       - npm install
       - npm run clientinstall
+      - npm run clientbuild
       - npm install -g migrate-mongo
   build:
     commands:
-      - echo Build started on `date`
-      - npm run clientbuild
       - migrate-mongo up
 artifacts:
   files:
