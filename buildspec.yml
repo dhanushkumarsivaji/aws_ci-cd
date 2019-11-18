@@ -9,7 +9,7 @@ phases:
       - npm install
       - npm run clientinstall
       - npm run clientbuild
-      # - npm install -g migrate-mongo
+      - npm install -g migrate-mongo
   # build:
   #   commands:
   #     - migrate-mongo down
