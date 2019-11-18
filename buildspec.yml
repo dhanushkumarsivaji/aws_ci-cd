@@ -12,7 +12,7 @@ phases:
       - npm install -g migrate-mongo
   build:
     commands:
-      - migrate-mongo up
+      - migrate-mongo down
 artifacts:
   files:
     - '**/*'
