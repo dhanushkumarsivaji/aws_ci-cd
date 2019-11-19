@@ -27,7 +27,7 @@ app.use('/api/contacts', require('./routes/contacts'));
 app.use('/api/quotes',require('./routes/quotes'))
 
 // Serve static assets in production
-if (['production', 'ci','beta','dev'].includes(process.env.NODE_ENV)) {
+if (['production','ci','beta','dev'].includes(process.env.NODE_ENV)) {
   // Set static folder
   app.use(express.static('client/build'));
 
