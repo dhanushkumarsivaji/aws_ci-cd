@@ -1,7 +1,7 @@
 module.exports = {
   async up(db) {
     
-    await db.collection('quotes').updateOne({ quotes: "work hard" }, { $set:{ quotes:"You are born to win"} });
+    await db.collection('quotes').updateOne({ quotes: "You are born to win" }, { $set:{ quotes:"Life is not an easy task"} });
   },
 
   async down(db) {
