@@ -12,7 +12,7 @@
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client",
     "test:watch": "cross-env NODE_ENV=test && jest --watchAll",
-     "test":"jest"
+     "test":"jest --forceExit"
   },
   "keywords": [],
   "author": "",
