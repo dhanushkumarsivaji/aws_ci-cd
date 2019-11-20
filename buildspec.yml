@@ -10,9 +10,9 @@ phases:
       - npm run clientinstall
       - npm run clientbuild
       - npm install -g migrate-mongo
-  # build:
-  #   commands:
-  #     - npm run test
+  build:
+    commands:
+      - npm run test
 artifacts:
   files:
     - '**/*'
