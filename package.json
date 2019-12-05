@@ -31,6 +31,7 @@
     "mongoose": "^5.5.11",
     "redis": "^2.8.0",
     "supertest": "^4.0.2",
+    "swagger-ui-express": "^4.0.7"
   },
   "devDependencies": {
     "concurrently": "^4.1.0",
