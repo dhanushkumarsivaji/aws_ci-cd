@@ -18,8 +18,8 @@ const Register = props => {
       setAlert(error, 'danger');
       clearErrors();
     }
-   // eslint-disable-next-line
-  }, [error,props.history,isAuthenticated]);
+    // eslint-disable-next-line
+  }, [error, props.history, isAuthenticated]);
 
   const [user, setUser] = useState({
     name: '',
@@ -40,11 +40,11 @@ const Register = props => {
     } else if (password !== password2) {
       setAlert('Passwords do not match', 'danger');
     } else {
-        register({
-            name,
-            email,
-            password
-        })
+      register({
+        name,
+        email,
+        password
+      });
     }
   };
 
@@ -99,7 +99,7 @@ const Register = props => {
         <input
           type='submit'
           value='Register'
-          className='btn btn-primary btn-block'
+          className='btn btn-dark btn-block'
         />
       </form>
     </div>
