@@ -28,7 +28,7 @@
     "jsonwebtoken": "^8.5.1",
     "migrate-mongo": "^7.0.1",
     "mongodb": "^3.3.4",
-    "mongoose": "^5.5.11",
+    "mongoose": "^5.7.5",
     "redis": "^2.8.0",
     "supertest": "^4.0.2",
     "swagger-ui-express": "^4.0.7"
