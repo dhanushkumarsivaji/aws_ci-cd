@@ -5,12 +5,12 @@ const app = express();
 const mongoose = require('mongoose');
 require('dotenv').config()
 require('./middleware/cache')
-app.use(cors()) 
+app.use(cors())
 
 // Connect Database
 mongoose.connect(process.env.DB, {
   useNewUrlParser: true,
-  useCreateIndex: true, 
+  useCreateIndex: true,
   useFindAndModify: false
 });
 
@@ -23,10 +23,11 @@ app.use(express.json({ extended: false }));
 app.use('/api/users', require('./routes/users'));
 app.use('/api/auth', require('./routes/auth'));
 app.use('/api/contacts', require('./routes/contacts'));
-app.use('/api/quotes',require('./routes/quotes'))
+app.use('/api/quotes', require('./routes/quotes'))
+app.use('/test/check', require('./routes/test'))
 
 // Serve static assets in production
-if (['prod','beta','dev'].includes(process.env.NODE_ENV)) {
+if (['production', 'ci', 'beta', 'dev'].includes(process.env.NODE_ENV)) {
   // Set static folder
   app.use(express.static('client/build'));
   app.get('*', (req, res) =>
